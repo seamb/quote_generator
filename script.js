@@ -54,7 +54,8 @@ async function getQuotes() {
 
 // To tweet a quote
 function tweetQuote() {
-  const twitterUrl = `https://X.com/intent/post?text=${quoteText.textContent} - ${authorText.textContent}`;
+  const twitterUrl = `
+https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
   window.open(twitterUrl, '_blank');
 }
 
