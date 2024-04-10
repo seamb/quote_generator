@@ -1,28 +1,15 @@
-const twtbnt = document.getElementsByID('X-share-button');
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
-// const twitterBtn = document.getElementById('twitter');
+const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
-const loader = document.getElementById('loader');
-
 let apiQuotes = [];
-
-function showLoadingSpin() {
-  loader.hidden = false;
-  quoteContainer.hidden = true;
-}
-
-function hideLoadingSpin() {
-  quoteContainer.hidden = true;
-  loader.hidden = true;
-}
-
 // Show New Quote
 function newQuote() {
-  showLoadingSpin();
   // Pick a random quote from API quotes array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+  console.log('Quote: ', quote);
+  authorText.textContent = quote.author;
   // To check if author is blank, fills with "-Unknown"
   if (!quote.author) {
     authorText.textContent = '-Unknown';
@@ -36,14 +23,13 @@ function newQuote() {
   } else {
     quoteText.classList.remove('long-quote');
   }
-  // Set Quote, hide loading
   quoteText.textContent = quote.text;
-  hideLoadingSpin();
+
+  console.log('Quote: ', quote);
 }
 
 // Get Quotes From API
 async function getQuotes() {
-  showLoadingSpin();
   const apiUrl = 'https://type.fit/api/quotes';
   try {
     const resp = await fetch(apiUrl);
@@ -60,7 +46,7 @@ function tweetQuote() {
 
 //Event Listeners
 newQuoteBtn.addEventListener('click', newQuote);
-twtbnt.addEventListener('click', tweetQuote);
+twitterBtn.addEventListener('click', tweetQuote);
 
 // On Load
 getQuotes();
