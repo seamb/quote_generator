@@ -14,7 +14,7 @@ function showLoadingSpin() {
 }
 
 function hideLoadingSpin() {
-  quoteContainer.hidden = false;
+  quoteContainer.hidden = true;
   loader.hidden = true;
 }
 
