@@ -1,10 +1,10 @@
+const twtbnt = document.getElementsByID('X-share-button');
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
-const twtbnt = document.getElementById('X-share-button');
+// const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
-// const twtbnt = document.getElementsByClassName('X-share-button');
 
 let apiQuotes = [];
 
