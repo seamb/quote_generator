@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Dosis&family=EB+Garamond&family=Raleway:wght@100;400&family=Roboto:wght@100&family=Tenor+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Dosis&family=EB+Garamond&family=Raleway:wght@100;400&family=Roboto:wght@100&family=Tenor+Sans&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -51,7 +51,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
+.X-share-button {
+  color: #040404;
+}
 button {
   cursor: pointer;
   font-size: 1.2rem;
@@ -73,6 +75,9 @@ button:active {
 }
 
 .twitter-button:hover {
+  color: #38a1f3;
+}
+.X-share-button:hover {
   color: #38a1f3;
 }
 
